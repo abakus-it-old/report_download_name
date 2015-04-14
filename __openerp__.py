@@ -13,8 +13,11 @@
     Available variables for the attachment field: 
         - object (reports model)
         - time (Python library)
-        - now (generated string that represents the current time, format: %Y%m%d%H%M%S)
-    Example: 'contract_'+str(object.id)+'_'+now+'.pdf' => "contract_20_20150414135834.pdf"
+    
+    Example: 
+    "Timesheet report - "+object.name+" ("+time.strftime("%Y%m%d%H%M%S")+").pdf" 
+    =>
+    "Timesheet report - Contract NAME (20150414130953).pdf"
     
     This module has been developed by Bernard Delhez, intern @ AbAKUS it-solutions, under the control of Valentin Thirion.    
     This module is inspired by the module from Nicolas Brisac: https://github.com/oasiswork/odoo-report-download-name/
