@@ -18,7 +18,8 @@ class Report(osv.Model):
                 obj = self.pool[report.model].browse(cr, uid, record_id)
                 try:
                     filename = eval(report.attachment, {'object': obj, 'time': time, 'now': now})
-                    attachment[record_id] = filename
+                    if filename:
+                        attachment[record_id] = filename
                 except:
                     pass
 
