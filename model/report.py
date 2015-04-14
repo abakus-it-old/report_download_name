@@ -15,7 +15,7 @@ class Report(osv.Model):
         
         if report.attachment:
             for record_id in ids:
-                obj = self.pool[report.model].browse(cr, uid, record_id
+                obj = self.pool[report.model].browse(cr, uid, record_id)
                 try:
                     filename = eval(report.attachment, {'object': obj, 'time': time, 'now': now})
                     attachment[record_id] = filename
