@@ -7,7 +7,6 @@ Available variables for the attachment field:
 ---------------------------------------------
     - object (reports model)
     - time (Python library)
-    - now (generated string that represents the current time, format: %Y%m%d%H%M%S)
 
 Example: 
 "Timesheet report - "+object.name+" ("+time.strftime("%Y%m%d%H%M%S")+").pdf" 
