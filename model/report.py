@@ -1,7 +1,6 @@
 from openerp.osv import osv
 import time
-import datetime
-from pytz import timezone
+from openerp.tools.safe_eval import safe_eval as eval
 
 class Report(osv.Model):
     _inherit = ["report"]
@@ -10,14 +9,12 @@ class Report(osv.Model):
     def _get_attachment_name_dict(self, cr, uid, ids, report):
         attachment = {}
         attachment['model'] = report.model
-        local_tz = timezone('Europe/Brussels')
-        now = datetime.datetime.now(local_tz).strftime("%Y%m%d%H%M%S")
-        
+
         if report.attachment:
             for record_id in ids:
                 obj = self.pool[report.model].browse(cr, uid, record_id)
                 try:
-                    filename = eval(report.attachment, {'object': obj, 'time': time, 'now': now})
+                    filename = eval(report.attachment, {'object': obj, 'time': time})
                     if filename:
                         attachment[record_id] = filename
                 except:
