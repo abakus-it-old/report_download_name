@@ -1,4 +1,6 @@
-# It sets the PDF name correctly when downloading report.
+# Report Name Improver
+
+This module sets the PDF name correctly when downloading report.
 
 It generate the name by evaluating the attachment field of a report declaration.
 Don't forget the string '.pdf' at the end of attachment.
