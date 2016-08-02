@@ -18,6 +18,10 @@
     "Timesheet report - "+object.name+" ("+time.strftime("%Y%m%d%H%M%S")+").pdf" 
     =>
     "Timesheet report - Contract NAME (20150414130953).pdf"
+
+    Need to install 'simplejson'
+    - apt-get install python-simplejson
+
     
     This module has been developed by Bernard Delhez, intern @ AbAKUS it-solutions, under the control of Valentin Thirion.    
     This module is inspired by the module from Nicolas Brisac: https://github.com/oasiswork/odoo-report-download-name/
