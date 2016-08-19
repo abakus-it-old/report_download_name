@@ -1,6 +1,6 @@
 {
     'name': 'Report Download Name',
-    'version': '1.0',
+    'version': '9.0.1.0',
     'depends': ['report'],
     'author': "Bernard DELHEZ, AbAKUS it-solutions SARL",
     'website': "http://www.abakusitsolutions.eu",
